@@ -1,0 +1,98 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+    int n,i,f=1;
+    double result;
+    printf("~~~~Type Of Calculator~~~~\n");
+    printf("\n 1  Standard Calculator\n");
+    printf("\n 2  Scientific Calculator \n");
+    printf("\nChoose Type of Calculator:");
+    scanf("%d",&n);
+    if(n==1){
+    printf("\n 1 addition");
+    printf("\n 2 subtraction");
+    printf("\n 3 division");
+    printf("\n 4 multiplication");
+    printf("\n");
+    int n1,n2;
+    printf("\n");
+    printf("enter first number:");
+    scanf("%d",&n1);
+    printf("enter second number:");
+    scanf("%d",&n2);
+    int s;
+    printf("\n choose type of calculation:");
+    scanf("%d",&s);
+    switch(s)
+    {
+        case 1:printf("\n addition:%d",n1+n2);
+        break;
+        case 2:printf("\n subtraction:%d",n1-n2);
+        break;
+        case 3:printf("\n division:%f",n1/n2);
+        break;
+        case 4:printf("\n multiplication:%d",n1*n2);
+        break;
+        default: printf("\n choose correct calculation type\n ");
+        break;
+    }
+    }
+     if(n==2)
+    {
+        printf("\n  1 square");
+        printf("\n  2 square root");
+        printf("\n  3 cube");
+        printf("\n  4 power");
+        printf("\n  5 factorial");
+        printf("\n  6 sin");
+        printf("\n  7 cos");
+        printf("\n  8 tan");
+        printf("\n  9 Natural logarithm");
+        printf("\n  10 Common logarithm");
+        int s1;
+        printf("\n");
+        printf("\nenter number:");
+        scanf("%d",&s1);
+        int s2;
+        printf("\n choose type of calculation:");
+        scanf("%d",&s2);
+        switch(s2)
+        {
+            case 1:printf("\n square:%d",s1*s1);
+            break;
+            case 2:printf("\n square root:%f",sqrt(s1));
+            break;
+            case 3:printf("\n cube:%d",s1*s1*s1);
+            break;
+            case 4:
+                printf("\nenter power:");
+            scanf("%d",&i);
+             result=pow(s1,i);
+                printf("\n power:%f",result);
+            break;
+            case 5:for(i=1;i<=s1;i++)
+            {
+                f=f*i;
+            }
+            printf("\n factorial:%d",f);
+            break;
+            case 6:printf("\n sin:%f",sin(s1));
+            break;
+            case 7:printf("\n cos:%f",cos(s1));
+            break;
+            case 8:printf("\n tan:%f",tan(s1));
+            break;
+            case 9:printf("\n log:%f",log(s1));
+            break;
+            case 10: result=log10(s1);
+                printf("\n log10(%d):%f",s1,result);
+            break;
+            case 11:printf("\n exp(%d):%f",s1,exp(s1));
+            break;
+            default: printf("\n choose correct calculation type\n ");
+            break;
+        }
+    }
+    return 0;
+}
